@@ -87,4 +87,8 @@ function removeItemCart(button){
 
     contentValue.remove();
     htmlCartContent = contentCart.html();
+
+    if(htmlCartContent.trim() == ''){
+        contentCart.html('<p class="empty-cart">Seu carrinho está vazio</p>');
+    }
 }
