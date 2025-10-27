@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <h1>TechStore</h1>
+        </a>
+        <ul class="header-nav">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Produtos</a>
+            </li>
+            <li>
+                <a href="#">Ofertas</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="main">
+        <section class="products">
+            <h2>Nossos Produtos</h2>
+            <div class="content-products" data-content="products">
+                <p>Carregando produtos...</p>
+            </div>
+        </section>
+        <section class="cart-items">
+            <h2>Meu Carrinho</h2>
+            <ul class="card-itemCart" data-cart="items"></ul>
+            <h3 class="total-value">Total: <span data-cart="value">R$ 5200,00</span></h3>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 TechStore - Todos os direitos reservados</p>
+        <ul>
+            <li>
+                <a href="#">Politica de Privacidade</a>
+            </li>
+            <li>
+                <a href="#">Termos de uso</a>
+            </li>
+            <li>
+                <a href="#">Trocas e Devoluções</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="javascript/jquery-3.7.1.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/functionsButtons.js"></script>
+</body>
+</html>

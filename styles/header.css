@@ -1,0 +1,37 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 20px;
+    background-color: rgb(35, 52, 100);
+}
+
+.header h1{
+    color: rgb(108, 142, 233);
+}
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header-nav li a{
+    font-size: 18px;
+    font-weight: 500;
+
+    padding: 6px 12px;
+
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+
+    transition: all 0.2s;
+}
+
+.header-nav li:hover a{
+    background-color: rgb(108, 142, 233);
+}

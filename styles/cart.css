@@ -1,0 +1,114 @@
+.cart-items{
+    flex: 1 0 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    background-color: #ffffff;
+    height: 700px;
+    min-height: fit-content;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items *{
+    width: 100%;
+}
+
+.cart-items > h2{
+    font-size: 30px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid rgb(189, 50, 8);
+
+    color: rgb(49, 49, 49);
+}
+
+.card-infos{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgb(168, 167, 167);
+}
+
+.card-infos div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    align-items: center;
+}
+
+.card-infos div img{
+    object-fit: cover;
+    width: 120px;
+    height: 80px;
+}
+
+.card-infos h4{
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    color: rgb(39, 39, 39);
+}
+
+.card-infos span{
+    font-size: 18px;
+    font-weight: 600;
+
+    color: rgb(7, 150, 7);
+}
+
+.card-infos button{
+    padding: 8px 6px;
+
+    font-weight: 600;
+    font-size: 14px;
+    
+    color: white;
+    border-radius: 3px;
+    background-color: rgb(179, 19, 19);
+
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.card-infos button:hover{
+    background-color: rgb(216, 16, 16);
+}
+
+.total-value{
+    background-color: #dbdbdb;
+    color: rgb(70, 70, 70);
+
+    text-align: end;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(66, 66, 66);
+    padding: 15px;
+
+    border-top: 4px solid rgb(34, 161, 211);
+    border-radius: 5px;
+}
+
+.errorInfo{
+    color: rgb(66, 66, 66);
+    font-style: italic;
+}
+
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px){
+    .card-infos {
+        flex-wrap: wrap;
+    }
+}

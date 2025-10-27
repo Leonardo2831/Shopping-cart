@@ -1,0 +1,38 @@
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 20px;
+    background-color: rgb(35, 52, 100);
+}
+
+.footer p{
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+.footer ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer ul li a{
+    font-size: 18px;
+    font-weight: 500;
+
+    padding: 6px 12px;
+
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+
+    transition: all 0.2s;
+}
+
+.footer ul li:hover a{
+    background-color: rgb(108, 142, 233);
+}
