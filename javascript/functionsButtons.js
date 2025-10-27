@@ -19,7 +19,7 @@ function addItemCart(idContent){
     const contentCart = $('[data-cart="items"]');
 
     $.ajax({
-        url: '../data/products.json', 
+        url: './data/products.json', 
         method: 'GET',
         type: 'json', 
         success: function(res){
