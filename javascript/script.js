@@ -19,7 +19,7 @@ $(function(){
                     <h3>${itemRes.name}</h3>
                     <p>${itemRes.description}</p>
                     <p data-item="price" class="price-green">${formattedPrice}</p>
-                    <button onclick="addCart(${itemRes.id - 1})">Adicionar ao Carrinho</button>
+                    <button onclick="addItemCart(${itemRes.id - 1})">Adicionar ao Carrinho</button>
                 </div>
             `;
 
