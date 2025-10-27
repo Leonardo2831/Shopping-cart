@@ -2,7 +2,6 @@
     flex: 1 0 150px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
 
     background-color: #ffffff;
     height: 700px;
@@ -25,17 +24,23 @@
     color: rgb(49, 49, 49);
 }
 
-.card-infos{
+.cart-items ul{
+    max-height: 600px;
+    overflow-y: auto;
+
+    padding: 20px;
+}
+
+.card-infos-products{
     display: flex;
     align-items: center;
     gap: 30px;
-
     padding: 20px 0;
 
     border-bottom: 1px solid rgb(168, 167, 167);
 }
 
-.card-infos div{
+.card-infos-products div{
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -43,26 +48,26 @@
     align-items: center;
 }
 
-.card-infos div img{
+.card-infos-products div img{
     object-fit: cover;
     width: 120px;
 }
 
-.card-infos h4{
+.card-infos-products h4{
     margin-bottom: 10px;
 
     font-size: 16px;
     color: rgb(39, 39, 39);
 }
 
-.card-infos span{
+.card-infos-products span{
     font-size: 18px;
     font-weight: 600;
 
     color: rgb(7, 150, 7);
 }
 
-.card-infos button{
+.card-infos-products button{
     padding: 8px 6px;
 
     font-weight: 600;
@@ -76,11 +81,14 @@
     transition: all 0.2s ease-out;
 }
 
-.card-infos button:hover{
+.card-infos-products button:hover{
     background-color: rgb(216, 16, 16);
 }
 
 .total-value{
+    margin-top: 20px;
+    padding: 15px;
+
     background-color: #dbdbdb;
     color: rgb(70, 70, 70);
 
@@ -88,7 +96,6 @@
     font-weight: 700;
     font-size: 18px;
     color: rgb(66, 66, 66);
-    padding: 15px;
 
     border-top: 4px solid rgb(34, 161, 211);
     border-radius: 5px;
@@ -107,7 +114,7 @@
 }
 
 @media (max-width: 480px){
-    .card-infos {
+    .card-infos-products {
         flex-wrap: wrap;
     }
 }
