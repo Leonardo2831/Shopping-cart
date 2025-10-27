@@ -5,8 +5,6 @@ $(function(){
 
     function successRequest(res){
         res.products.forEach((itemRes) => {
-            console.log(itemRes);
-            
             
             const formattedPrice = 
                 itemRes.price
@@ -16,12 +14,12 @@ $(function(){
                 });
 
             contentHtmlProducts += `
-                <div id=${itemRes.id}>
+                <div id=${itemRes.id - 1}>
                     <img src=${itemRes.image} alt=${itemRes.name}>
                     <h3>${itemRes.name}</h3>
                     <p>${itemRes.description}</p>
                     <p data-item="price" class="price-green">${formattedPrice}</p>
-                    <button onclick="addCart(${itemRes.id})">Adicionar ao Carrinho</button>
+                    <button onclick="addCart(${itemRes.id - 1})">Adicionar ao Carrinho</button>
                 </div>
             `;
 
