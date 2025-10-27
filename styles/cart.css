@@ -46,7 +46,6 @@
 .card-infos div img{
     object-fit: cover;
     width: 120px;
-    height: 80px;
 }
 
 .card-infos h4{
