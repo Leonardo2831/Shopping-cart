@@ -11,22 +11,13 @@ function totalValueCart(){
 }
 totalValueCart();
 
-function addItemCart(idContent){
-    const contentCart = $('[data-cart="items"]');
-
-    $.ajax({
-        url: '../data/products.json', 
-        method: 'GET',
-        type: 'json', 
-        success: function(res){
-            const dataItem = res.products[idContent];
-            valueCart += dataItem.price;
-            const formattedPrice = 
-                dataItem.price
-                    .toLocaleString('pt-BR', {
-                        style: 'currency',
-                        currency: 'BRL',
-                    });
+window.addItemCart = (idContent) => {
+    const contentCart = document.querySelector('[data-cart="items"]');
+    const dataItem = res[idContent];
+    
+    valueCart += dataItem.price;
+       
+    const formattedPrice = formatPrice(dataItem.price);
 
     htmlCartContent += `
         <li class="card-infos-products">
