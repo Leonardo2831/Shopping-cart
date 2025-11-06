@@ -1,49 +1,63 @@
-$(function(){
-    const contentProducts = $('[data-content="products"]');
+const contentProducts = document.querySelector('[data-content="products"]');
 
-    let contentHtmlProducts = '';
+let contentHtmlProducts = '';
 
-    function successRequest(res){
-        res.products.forEach((itemRes) => {
+export function formatPrice(price){
+    const formattedPrice = 
+        price.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD',
+        });
+
+    return formattedPrice;
+}
+
+function successRequest(res){
+    contentProducts.innerHTML = '';
+
+    res.forEach((itemRes) => {
             
-            const formattedPrice = 
-                itemRes.price
-                .toLocaleString('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL',
-                });
+        const formattedPrice = formatPrice(itemRes.price);
 
-            contentHtmlProducts += `
-                <div id=${itemRes.id - 1}>
-                    <img src=${itemRes.image} alt=${itemRes.name}>
-                    <h3>${itemRes.name}</h3>
-                    <p>${itemRes.description}</p>
+        contentProducts.innerHTML += `
+            <div
+                id=${itemRes.id - 1} 
+                data-category="${itemRes.category}"
+            >
+                <div>
+                    <img src=${itemRes.image} alt=${itemRes.title} >
+                    <h3>${itemRes.title}</h3>
+                    <p title=${itemRes.description}>${itemRes.description}</p>
                     <p data-item="price" class="price-green">${formattedPrice}</p>
-                    <button onclick="addItemCart(${itemRes.id - 1})">Adicionar ao Carrinho</button>
                 </div>
-            `;
+                <button onclick="addItemCart(${itemRes.id - 1})">Adicionar ao Carrinho</button>
+            </div>
+        `
+    });
+}
 
-            contentProducts.html(contentHtmlProducts);
-        });
+function errorRequest(err){
+    contentHtmlProducts = `
+        <p>Ocorreu um erro, retorne mais tarde.</p>
+        <b>${err.status}, ${err.statusText}</b>
+    `;
 
-        contentProducts.html(contentHtmlProducts);
+    contentProducts.style.cssText = 'flex-direction: column;';
+
+    contentProducts.innerHTML = contentHtmlProducts;
+}
+
+export let res = [];
+
+async function requestItems(){
+    try {
+        const data = await (await fetch('https://fakestoreapi.com/products')).json();
+        res = [...data];
+
+        successRequest(data);
+    } catch (err) {
+        errorRequest(err);
     }
+}
 
-    function errorRequest(err){
-        contentHtmlProducts = `
-            <p>Ocorreu um erro, retorne mais tarde.</p>
-            <b>${err.status}, ${err.statusText}</b>
-        `;
-
-        contentProducts.css({
-            'flex-direction': 'column',
-        });
-
-        contentProducts.html(contentHtmlProducts);
-    }
-
-    $.getJSON('./data/products.json')
-        .done(successRequest)
-        .fail(errorRequest)
-        .always();
-});
+requestItems();
