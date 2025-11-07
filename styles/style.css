@@ -10,13 +10,17 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ebeff7;
 }
 
 img{
     width: 100%;
+}
+
+.filterItem{
+    display: none !important;
 }
