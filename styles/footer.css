@@ -16,10 +16,11 @@
 
     padding: 16px 40px;
 
-    border-top: 1px solid #000;
+    border-top: 1px solid #e2e2e2;
 }
 
-.footer aside ul{
+.footer aside, .footer ul{
+    max-width: 400px;
     padding: 40px;
     flex: 1 1 0;
 }
@@ -39,6 +40,10 @@
 
 .footer ul li + li{
     margin-top: 15px;
+}
+
+.footer ul:first-of-type li:first-of-type{
+    margin: 0 0 0 12px;
 }
 
 .footer ul li{
@@ -61,7 +66,6 @@
 
 .footer ul:last-of-type li a{
     padding: 0;
-
     border-radius: 0;
 }
 
