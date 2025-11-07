@@ -4,6 +4,17 @@
     padding: 40px;
 }
 
+.loader{
+    border: 8px solid rgb(34, 161, 211);
+    border-top: 8px solid #ebeff7;
+    border-radius: 100%;
+
+    width: 60px;
+    height: 60px;
+
+    animation: spin 1s linear infinite;
+}
+
 .products{
     flex: 3 1 0;
 }
@@ -59,7 +70,7 @@
 
     border-radius: 5px;
     color: rgb(248, 248, 248);
-    background-color: rgb(52, 130, 204);
+    background-color: rgb(34, 161, 211);
 
     cursor: pointer;
     transition: all 0.3s;
@@ -70,7 +81,7 @@
 }
 
 .filterButton:hover{
-    background-color: rgb(35, 52, 100);
+    background-color: #1f63a3;
 }
 
 .filterButton option{
@@ -85,6 +96,11 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+}
+
+.content-products.empty{
+    align-items: center;
+    justify-content: center;
 }
 
 .content-products > div{
