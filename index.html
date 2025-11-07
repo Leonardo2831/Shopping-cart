@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <a href="index.html">
-            <h1>TechStore</h1>
+            <h1>FakeStore</h1>
         </a>
         <ul class="header-nav">
             <li>
@@ -31,24 +31,20 @@
         <section class="products">
             <h2>Nossos Produtos</h2>
             <div>
-                <select class="filter" data-filter>
-                    <div>
+                <div class="content-filter">
+                    <select id="filter" name="filter" class="filterButton" data-filter="">
+                        <option value="">Todas as categorias</option>
+                        <option value="electronics">Eletronicos</option>
+                        <option value="jewelery">Jóias</option>
+                        <option value="men's clothing">Roupas Masculinas</option>
+                        <option value="women's clothing">Roupas Femininas</option>
+                    </select>
+                    <div class="menu">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
-                    <option>Filtrar</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+                </div>
                 <div class="content-products" data-content="products">
                     <p>Carregando produtos...</p>
                 </div>
@@ -100,6 +96,6 @@
 
     <script type="module" src="javascript/script.js"></script>
     <script type="module" src="javascript/functionsButtons.js"></script>
-    <script type="module" src="javascript/filter.js"></script>
+    <script src="javascript/filter.js"></script>
 </body>
 </html>
