@@ -14,9 +14,9 @@ export function formatPrice(price){
 
 function successRequest(res){
     contentProducts.innerHTML = '';
+    contentProducts.classList.remove('empty');
 
     res.forEach((itemRes) => {
-            
         const formattedPrice = formatPrice(itemRes.price);
 
         contentProducts.innerHTML += `
