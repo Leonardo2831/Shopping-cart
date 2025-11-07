@@ -3,6 +3,16 @@
 @import 'cart.css';
 @import 'footer.css';
 
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
 *{
     padding: 0;
     border: 0;
@@ -15,6 +25,10 @@
 
 body{
     background-color: #ebeff7;
+}
+
+main{
+    min-height: 60vh;
 }
 
 img{
